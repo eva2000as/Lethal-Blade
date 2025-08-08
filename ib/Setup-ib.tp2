@@ -1,0 +1,410 @@
+BACKUP ~ib\backup~ 
+AUTHOR ~bp_c_c@hotmail.com~ 
+LANGUAGE ~Chinese(Simplified)~ ~chs~ ~ib\chs\setup.tra~ 
+
+
+BEGIN @01 // ib Kit 
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ OR FILE_EXISTS_IN_GAME BD1000.are THEN BEGIN
+
+	INCLUDE ~ib/lib/fl#add_kit_ee.tpa~
+
+ADD_KIT ~ib~ 
+~ib             1 0 0 0 0 0 0 0~
+~ib 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~ib             0       13      6       6      6      6
+
+~
+~ib             0       0       0       0       0       0~
+~ib             0       0       0       0       0       0~
+~ib             0       0       0       0       0       0~
+~ib             1          1          1          1          1          1          1          1          1~
+~ib             0       0       0       0       0       0~
+~ib\noword\ib.2DA~
+~K_T_H K_T_HL~
+~0x00040000 4~
+~ib~
+~*  *  *  BAG29  RING25b  *  *  BOOT02  AMUL28  BRAC06  BELT09  *  *  *  ibps121,5  POTN137,5  POTN55,10  *  DAGG12  SW1H27~
+ SAY @02
+ SAY @03
+ SAY @04
+
+	LAF fl#add_kit_ee
+	  STR_VAR
+	    kit_name = ib
+	    clswpbon = ~0 0 2~
+	    hpclass = ~HPROG~
+	    clsrcreq = ~1 0 1 0 0 0 0~
+	    numwslot = 2
+	    clascolr = ~182 182 136 184 142~
+
+	END
+
+END
+
+COPY ~ib\noword~ ~override~ 
+
+///////////////////技能///////////////////
+COPY ~ib\ib\ib001.spl~ ~override\ib001.spl~
+  SAY NAME1 @05
+  SAY NAME2 @05
+  SAY UNIDENTIFIED_DESC @06
+  SAY DESC @06
+
+
+COPY ~ib\ib\ib002.spl~ ~override\ib002.spl~
+  SAY NAME1 @07
+  SAY NAME2 @07
+  SAY UNIDENTIFIED_DESC @08
+  SAY DESC @08
+
+COPY ~ib\ib\ib002A.spl~ ~override\ib002A.spl~
+  SAY NAME1 @09
+  SAY NAME2 @09
+
+COPY ~ib\ib\ib002B.spl~ ~override\ib002B.spl~
+  SAY NAME1 @10
+  SAY NAME2 @10
+
+COPY ~ib\ib\ib002C.spl~ ~override\ib002C.spl~
+  SAY NAME1 @11
+  SAY NAME2 @11
+
+COPY ~ib\ib\ib002D.spl~ ~override\ib002D.spl~
+  SAY NAME1 @12
+  SAY NAME2 @12
+
+COPY ~ib\ib\ib002E.spl~ ~override\ib002E.spl~
+  SAY NAME1 @117
+  SAY NAME2 @117
+
+COPY ~ib\ib\ib002F.spl~ ~override\ib002F.spl~
+  SAY NAME1 @118
+  SAY NAME2 @118
+
+COPY ~ib\ib\ib003.spl~ ~override\ib003.spl~
+  SAY NAME1 @13
+  SAY NAME2 @13
+  SAY UNIDENTIFIED_DESC @14
+  SAY DESC @14
+
+COPY ~ib\ib\ib005.spl~ ~override\ib005.spl~
+  SAY NAME1 @15
+  SAY NAME2 @15
+  SAY UNIDENTIFIED_DESC @16
+  SAY DESC @16
+
+COPY ~ib\ib\ib006.spl~ ~override\ib006.spl~
+  SAY NAME1 @17
+  SAY NAME2 @17
+  SAY UNIDENTIFIED_DESC @18
+  SAY DESC @18
+
+COPY ~ib\ib\ib006A.spl~ ~override\ib006A.spl~
+  SAY NAME1 @19
+  SAY NAME2 @19
+
+COPY ~ib\ib\ib006B.spl~ ~override\ib006B.spl~
+  SAY NAME1 @20
+  SAY NAME2 @20
+
+COPY ~ib\ib\ib006C.spl~ ~override\ib006C.spl~
+  SAY NAME1 @21
+  SAY NAME2 @21
+
+COPY ~ib\ib\ib006D.spl~ ~override\ib006D.spl~
+  SAY NAME1 @22
+  SAY NAME2 @22
+
+COPY ~ib\ib\ib006E.spl~ ~override\ib006E.spl~
+  SAY NAME1 @119
+  SAY NAME2 @119
+
+COPY ~ib\ib\ib006F.spl~ ~override\ib006F.spl~
+  SAY NAME1 @120
+  SAY NAME2 @120
+
+COPY ~ib\ib\ib002str.spl~ ~override\ib002str.spl~
+  SAY NAME1 @121
+  SAY NAME2 @121
+
+COPY ~ib\ib\ib006str.spl~ ~override\ib006str.spl~
+  SAY NAME1 @121
+  SAY NAME2 @121
+
+COPY ~ib\ib\ib002dex.spl~ ~override\ib002dex.spl~
+  SAY NAME1 @122
+  SAY NAME2 @122
+
+COPY ~ib\ib\ib006dex.spl~ ~override\ib006dex.spl~
+  SAY NAME1 @122
+  SAY NAME2 @122
+
+COPY ~ib\ib\ib002con.spl~ ~override\ib002con.spl~
+  SAY NAME1 @123
+  SAY NAME2 @123
+
+COPY ~ib\ib\ib006con.spl~ ~override\ib006con.spl~
+  SAY NAME1 @123
+  SAY NAME2 @123
+
+COPY ~ib\ib\ib002int.spl~ ~override\ib002int.spl~
+  SAY NAME1 @124
+  SAY NAME2 @124
+
+COPY ~ib\ib\ib006int.spl~ ~override\ib006int.spl~
+  SAY NAME1 @124
+  SAY NAME2 @124
+
+COPY ~ib\ib\ib002wis.spl~ ~override\ib002wis.spl~
+  SAY NAME1 @125
+  SAY NAME2 @125
+
+COPY ~ib\ib\ib006wis.spl~ ~override\ib006wis.spl~
+  SAY NAME1 @125
+  SAY NAME2 @125
+
+COPY ~ib\ib\ib002cha.spl~ ~override\ib002cha.spl~
+  SAY NAME1 @126
+  SAY NAME2 @126
+
+COPY ~ib\ib\ib006cha.spl~ ~override\ib006cha.spl~
+  SAY NAME1 @126
+  SAY NAME2 @126
+//////////////////////物品////////////////
+COPY ~ib\ib\ibps2.itm~ ~override\ibps2.itm~
+  SAY NAME2 @23
+  SAY DESC @24
+
+COPY ~ib\ib\ibps4.itm~ ~override\ibps4.itm~
+  SAY NAME2 @25
+  SAY DESC @26
+
+COPY ~ib\ib\ibps5.itm~ ~override\ibps5.itm~
+  SAY NAME2 @27
+  SAY DESC @28
+
+COPY ~ib\ib\ibps6.itm~ ~override\ibps6.itm~
+  SAY NAME2 @29
+  SAY DESC @30
+
+COPY ~ib\ib\ibps7.itm~ ~override\ibps7.itm~
+  SAY NAME2 @31
+  SAY DESC @32
+
+COPY ~ib\ib\ibps101.itm~ ~override\ibps101.itm~
+  SAY NAME2 @33
+  SAY DESC @34
+
+COPY ~ib\ib\ibps102.itm~ ~override\ibps102.itm~
+  SAY NAME2 @35
+  SAY DESC @36
+
+COPY ~ib\ib\ibps103.itm~ ~override\ibps103.itm~
+  SAY NAME2 @37
+  SAY DESC @38
+
+COPY ~ib\ib\ibps104.itm~ ~override\ibps104.itm~
+  SAY NAME2 @39
+  SAY DESC @40
+
+COPY ~ib\ib\ibps106.itm~ ~override\ibps106.itm~
+  SAY NAME2 @41
+  SAY DESC @42
+
+COPY ~ib\ib\ibps107.itm~ ~override\ibps107.itm~
+  SAY NAME2 @43
+  SAY DESC @44
+
+COPY ~ib\ib\ibps108.itm~ ~override\ibps108.itm~
+  SAY NAME2 @45
+  SAY DESC @46
+
+COPY ~ib\ib\ibps109.itm~ ~override\ibps109.itm~
+  SAY NAME2 @47
+  SAY DESC @48
+
+COPY ~ib\ib\ibps110.itm~ ~override\ibps110.itm~
+  SAY NAME2 @49
+  SAY DESC @50
+
+COPY ~ib\ib\ibps113.itm~ ~override\ibps113.itm~
+  SAY NAME2 @51
+  SAY DESC @52
+
+COPY ~ib\ib\ibps115.itm~ ~override\ibps115.itm~
+  SAY NAME2 @53
+  SAY DESC @54
+
+COPY ~ib\ib\ibps116.itm~ ~override\ibps116.itm~
+  SAY NAME2 @55
+  SAY DESC @56
+
+COPY ~ib\ib\ibps117.itm~ ~override\ibps117.itm~
+  SAY NAME2 @57
+  SAY DESC @58
+
+COPY ~ib\ib\ibps118.itm~ ~override\ibps118.itm~
+  SAY NAME2 @59
+  SAY DESC @60
+
+COPY ~ib\ib\ibps119.itm~ ~override\ibps119.itm~
+  SAY NAME2 @61
+  SAY DESC @62
+
+COPY ~ib\ib\ibps120.itm~ ~override\ibps120.itm~
+  SAY NAME2 @63
+  SAY DESC @64
+
+COPY ~ib\ib\ibps121.itm~ ~override\ibps121.itm~
+  SAY NAME2 @65
+  SAY DESC @66
+
+COPY ~ib\ib\ibps122.itm~ ~override\ibps122.itm~
+  SAY NAME2 @67
+  SAY DESC @68
+
+COPY ~ib\ib\ibps123.itm~ ~override\ibps123.itm~
+  SAY NAME2 @69
+  SAY DESC @70
+
+COPY ~ib\ib\ibps124.itm~ ~override\ibps124.itm~
+  SAY NAME2 @71
+  SAY DESC @72
+
+COPY ~ib\ib\ibps125.itm~ ~override\ibps125.itm~
+  SAY NAME2 @73
+  SAY DESC @74
+
+COPY ~ib\ib\ibps127.itm~ ~override\ibps127.itm~
+  SAY NAME2 @75
+  SAY DESC @76
+
+COPY ~ib\ib\ibps128.itm~ ~override\ibps128.itm~
+  SAY NAME2 @77
+  SAY DESC @78
+
+COPY ~ib\ib\ibps129.itm~ ~override\ibps129.itm~
+  SAY NAME2 @79
+  SAY DESC @80
+
+COPY ~ib\ib\ibps130.itm~ ~override\ibps130.itm~
+  SAY NAME2 @81
+  SAY DESC @82
+
+COPY ~ib\ib\ibps131.itm~ ~override\ibps131.itm~
+  SAY NAME2 @83
+  SAY DESC @84
+
+COPY ~ib\ib\ibps132.itm~ ~override\ibps132.itm~
+  SAY NAME2 @85
+  SAY DESC @86
+
+COPY ~ib\ib\ibps137.itm~ ~override\ibps137.itm~
+  SAY NAME2 @87
+  SAY DESC @88
+
+COPY ~ib\ib\ibps139.itm~ ~override\ibps139.itm~
+  SAY NAME2 @89
+  SAY DESC @90
+
+COPY ~ib\ib\ibps142.itm~ ~override\ibps142.itm~
+  SAY NAME2 @91
+  SAY DESC @92
+
+COPY ~ib\ib\ibps145.itm~ ~override\ibps145.itm~
+  SAY NAME2 @93
+  SAY DESC @94
+
+COPY ~ib\ib\ibps146.itm~ ~override\ibps146.itm~
+  SAY NAME2 @95
+  SAY DESC @96
+
+COPY ~ib\ib\ibps147.itm~ ~override\ibps147.itm~
+  SAY NAME2 @97
+  SAY DESC @98
+
+COPY ~ib\ib\ibps148.itm~ ~override\ibps148.itm~
+  SAY NAME2 @99
+  SAY DESC @100
+
+COPY ~ib\ib\ibps150.itm~ ~override\ibps150.itm~
+  SAY NAME2 @101
+  SAY DESC @102
+
+COPY ~ib\ib\ibps151.itm~ ~override\ibps151.itm~
+  SAY NAME2 @103
+  SAY DESC @104
+
+COPY ~ib\ib\ibps152.itm~ ~override\ibps152.itm~
+  SAY NAME2 @105
+  SAY DESC @106
+
+COPY ~ib\ib\ibps154.itm~ ~override\ibps154.itm~
+  SAY NAME2 @107
+  SAY DESC @108
+
+COPY ~ib\ib\ibps155.itm~ ~override\ibps155.itm~
+  SAY NAME2 @109
+  SAY DESC @110
+
+COPY ~ib\ib\ibps156.itm~ ~override\ibps156.itm~
+  SAY NAME2 @111
+  SAY DESC @112
+
+COPY ~ib\ib\ibpc3.itm~ ~override\ibpc3.itm~
+  SAY NAME2 @127
+  SAY DESC @128
+
+COPY ~ib\ib\ibpc6.itm~ ~override\ibpc6.itm~
+  SAY NAME2 @129
+  SAY DESC @130
+
+COPY ~ib\ib\ibpc8.itm~ ~override\ibpc8.itm~
+  SAY NAME2 @131
+  SAY DESC @132
+
+COPY ~ib\ib\ib003a.itm~ ~override\ib003a.itm~
+  SAY NAME2 @113
+  SAY DESC @114
+
+COPY ~ib\ib\ib003b.itm~ ~override\ib003b.itm~
+  SAY NAME2 @115
+  SAY DESC @116
+
+COPY ~ib\ib\ibpc1.itm~ ~override\ibpc1.itm~
+  SAY NAME2 @133
+  SAY DESC @134
+
+COPY ~ib\ib\ibpc5.itm~ ~override\ibpc5.itm~
+  SAY NAME2 @135
+  SAY DESC @136
+
+COPY ~ib\ib\ibpc11.itm~ ~override\ibpc11.itm~
+  SAY NAME2 @137
+  SAY DESC @138
+
+COPY ~ib\ib\ibpc20.itm~ ~override\ibpc20.itm~
+  SAY NAME2 @139
+  SAY DESC @140
+
+COPY ~ib\ib\bagib.itm~ ~override\bagib.itm~
+  SAY NAME2 @141
+  SAY DESC @142
+
+COPY ~ib\ib\bagib2.itm~ ~override\bagib2.itm~
+  SAY NAME2 @141
+  SAY DESC @143
+
+COPY_EXISTING ~arled.sto~      ~override/arled.sto~
+
+   ADD_STORE_ITEM ~bagib2~  #0 #0 #0 ~IDENTIFIED~ #1
+
+
+
+
+
+
+
+
+AT_INTERACTIVE_EXIT ~ib\readme.txt~
